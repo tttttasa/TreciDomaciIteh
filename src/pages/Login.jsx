@@ -28,7 +28,7 @@ function Login() {
     function login() {
         for (let i = 0; i < zaposleni.length; i++) {
             if (zaposleni[i].email == email && zaposleni[i].password == password) {
-                navigate('/prijava')
+                navigate('/taskovi')
             }
         }
     }
