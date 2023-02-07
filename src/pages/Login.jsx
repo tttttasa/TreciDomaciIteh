@@ -1,11 +1,20 @@
 import FormField from "../components/FormField";
-import { useState } from 'react'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    let zaposleni = [
+        { id: 1, email: 'zap1@gmail.com', password: 1 },
+        { id: 2, email: 'zap2@gmail.com', password: 2 },
+        { id: 3, email: 'zap3@gmail.com', password: 3 }
+    ]
+
 
     function emailHandle(email) {
         setEmail(email)
@@ -16,6 +25,15 @@ function Login() {
     }
 
 
+    function login() {
+        for (let i = 0; i < zaposleni.length; i++) {
+            if (zaposleni[i].email == email && zaposleni[i].password == password) {
+                navigate('/prijava')
+            }
+        }
+    }
+
+
     return (
         <div>
             <h1>LOGIN PAGE</h1>
@@ -23,7 +41,7 @@ function Login() {
             <FormField type="text" labelText="Email" funkcija={emailHandle} />
             <FormField type="password" labelText="Password" funkcija={passwordHandle} />
 
-            <button type="button">Login</button>
+            <button onClick={login} type="button">Login</button>
 
 
         </div>
