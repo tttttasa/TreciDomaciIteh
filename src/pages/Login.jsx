@@ -1,6 +1,7 @@
 import FormField from "../components/FormField";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Nav from "../components/Nav";
 
 
 function Login() {
@@ -36,6 +37,8 @@ function Login() {
 
     return (
         <div>
+            <Nav />
+
             <h1 className="mt-4">LOGIN PAGE</h1>
 
             <FormField type="text" labelText="Email" funkcija={emailHandle} />

@@ -1,5 +1,6 @@
 import FormField from "../components/FormField";
 import { useState } from 'react';
+import Nav from "../components/Nav";
 
 
 function Taskovi() {
@@ -24,6 +25,7 @@ function Taskovi() {
 
     return (
         <div>
+            <Nav />
 
             <h1 className="mt-3 mb-4">Taskovi</h1>
 

@@ -110,3 +110,25 @@ textarea {
 option {
   background-color: white;
 }
+
+.nav {
+  height: 45px;
+  background-color: black;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  margin-right: 1%;
+  margin-top: 0.2%;
+  background-color: black;
+}
+
+.nav a:hover {
+  color: white;
+}
+
+#homenav {
+  margin-left: 1.5%;
+}
