@@ -36,12 +36,12 @@ function Login() {
 
     return (
         <div>
-            <h1>LOGIN PAGE</h1>
+            <h1 className="mt-4">LOGIN PAGE</h1>
 
             <FormField type="text" labelText="Email" funkcija={emailHandle} />
             <FormField type="password" labelText="Password" funkcija={passwordHandle} />
-
-            <button onClick={login} type="button">Login</button>
+            <br />
+            <button onClick={login} className="btn btn-dark" type="button">Login</button>
 
 
         </div>
